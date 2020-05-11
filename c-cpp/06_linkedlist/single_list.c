@@ -31,8 +31,7 @@ void insert(struct single_list **prev, struct single_list *elem)
 	if (!prev)
 		return;
 
-	if (*prev)
-		elem->next = *prev;
+	elem->next = *prev;
 	*prev = elem;
 }
 
@@ -47,7 +46,8 @@ struct single_list* del(struct single_list **prev)
 
 	if (!prev)
 		return NULL;
-
+	if (*prev == NULL)
+		return NULL;
 	tmp = *prev;
 	*prev = (*prev)->next;
 	tmp->next = NULL;
@@ -74,7 +74,7 @@ struct single_list** search(struct single_list_head* head, int target)
 
 void reverse(struct single_list_head* head)
 {
-	struct single_list_head tmp;
+	struct single_list_head tmp = {NULL};
 	struct single_list *elem;
 
 	while (!is_empty(head)) {

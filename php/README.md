@@ -17,11 +17,14 @@
 * findMiddleNode 求链表的中间结点
 
 #### 08_stack
-<<<<<<< HEAD
-* 链栈实现
-=======
 * 链栈实现
 
 #### 09_stack
 * 队列链表实现
->>>>>>> upstream/master
+#### 10_heap
+* main 堆的基本操作,堆排序
+* findmiddle  动态数据流求中位数
+* topn 动态数据流求top k
+#### 24_tree
+* main 二叉树的基本操作 前中后序遍历
+* levelOrder 二叉树的层级遍历
